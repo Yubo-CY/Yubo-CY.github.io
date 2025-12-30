@@ -23,7 +23,7 @@ baidu_site_verification: # get baidu_site_verification from https://ziyuan.baidu
 author:
   name: "Yubo Wang"
   avatar: "images/android-chrome-512x512.png"
-  bio: "Lorem ipsum College"
+  bio: "Master Student at Brown University, working on computer graphics and computer vision."
   location: "Providence, USA"
   employer:
   pubmed:
@@ -37,7 +37,7 @@ author:
   flickr:
   facebook:
   foursquare:
-  github: # e.g., "github username"
+  github: "Yubo-CY"
   google_plus:
   keybase:
   instagram:
