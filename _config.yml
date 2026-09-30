@@ -8,7 +8,7 @@
 # Site Settings
 title: "Yubo Wang's Homepage"
 description: #"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. "
-repository: "RayeRen/acad-homepage.github.io"
+repository: "Yubo-CY/Yubo-CY.github.io"
 google_scholar_stats_use_cdn: true
 
 # google analytics
@@ -22,8 +22,8 @@ baidu_site_verification: # get baidu_site_verification from https://ziyuan.baidu
 # Site Author
 author:
   name: "Yubo Wang"
-  avatar: "images/android-chrome-512x512.png"
-  bio: "Master Student at Brown University, working on computer graphics and computer vision."
+  avatar: "images/avatar.jpg"
+  bio: "M.S. student in Computer Science at Brown University, working on physiological foundation models and multimodal representation learning."
   location: "Providence, USA"
   employer:
   pubmed:
