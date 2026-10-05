@@ -240,20 +240,6 @@ h3 { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.35; letter-spa
 }
 .footer p { margin: 0; }
 
-/* music */
-.music {
-  position: fixed; right: 20px; bottom: 20px; z-index: 25;
-  width: 44px; height: 44px; border-radius: 50%;
-  display: grid; place-items: center;
-  border: 1px solid var(--rule); background: var(--paper); color: var(--ink-2);
-  cursor: pointer;
-}
-.music:hover { color: var(--ink); border-color: var(--ink-3); }
-.music svg { width: 20px; height: 20px; fill: currentColor; }
-.music .music__on { display: none; }
-.music[aria-pressed="true"] .music__on { display: inline; }
-.music[aria-pressed="true"] .music__off { display: none; }
-
 /* small screens */
 @media (max-width: 760px) {
   :root { --gutter: 16px; }

@@ -64,13 +64,6 @@
     </div>
   </footer>
 
-  {% if site.music.src and site.music.src != "" %}
-  <button class="music" id="music" type="button" aria-pressed="false" aria-label="Play music" title="Play music"
-          data-src="{{ site.music.src | relative_url }}" data-autoplay="{{ site.music.autoplay }}">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path class="music__on" d="M4 9v6h4l5 4V5L8 9H4Zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4Zm-2.5-8.8v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6Z"/><path class="music__off" d="M4 9v6h4l5 4V5L8 9H4Zm16.6 0.4-1.4-1.4L17 10.2 14.8 8l-1.4 1.4 2.2 2.2-2.2 2.2 1.4 1.4 2.2-2.2 2.2 2.2 1.4-1.4-2.2-2.2 2.2-2.2Z"/></svg>
-  </button>
-  <script src="{{ '/assets/js/music.js' | relative_url }}?v=1" defer></script>
-  {% endif %}
 
   <script src="{{ '/assets/js/montage.js' | relative_url }}?v=1" defer></script>
 

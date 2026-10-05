@@ -18,12 +18,6 @@ goatcounter: "yubo-cy"
 # google analytics (optional, leave empty to disable)
 google_analytics_id: # get google_analytics_id from https://analytics.google.com/analytics/
 
-# Background music button (bottom right). Put an mp3 in /files/ and set src, e.g. "/files/music.mp3".
-# Leave src empty to hide the button. autoplay: true starts music on the visitor's first click or key press
-# (browsers do not allow sound before that).
-music:
-  src: ""
-  autoplay: false
 
 # SEO Related
 google_site_verification: # get google_site_verification from https://search.google.com/search-console/about
