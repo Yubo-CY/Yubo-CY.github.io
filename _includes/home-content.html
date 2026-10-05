@@ -1,0 +1,97 @@
+<section class="shell row about" id="about" aria-label="About">
+  <div class="row__head">
+    <img class="about__photo" src="{{ '/images/avatar.jpg' | relative_url }}" alt="Yubo Wang" width="160" height="160">
+  </div>
+  <div class="row__body prose">
+    <p>I'm a master's student in computer science at <strong>Brown University</strong>. I work on foundation models for physiological and other structured scientific data, and on what it takes for them to hold up outside the dataset they were trained on: adapting frozen models to new signal modalities without labels, and evaluating them honestly on clinical cohorts they have never seen.</p>
+    <p>Right now I'm a visiting student researcher with Prof. Yu Zhang at Stanford, a research intern with Prof. Haoqi Sun and Prof. M. Brandon Westover (Stanford Medicine and Harvard Medical School / BIDMC) working on whole-night sleep recordings, and a collaborator on Tabula 2.0, a foundation model for single-cell and tabular scientific data.</p>
+  </div>
+</section>
+
+<section class="shell row" id="publications">
+  <h2 class="row__head">Publications</h2>
+  <div class="row__body">
+    <article class="pub">
+      <h3><a href="https://arxiv.org/abs/2610.03546" target="_blank" rel="noopener">ZeroMAG: Zero-Shot Multimodal Adapter Generation for Plug-and-Play EEG Foundation Models</a></h3>
+      <p class="pub__authors"><b>Yubo Wang</b>, Jingying Ma, Xinliang Zhou, Yangxuan Zhou, Jiquan Wang, Sha Zhao, Yiyuan Yang, Yi Ding, Ziyu Jia, Chenyu Liu, Cuntai Guan</p>
+      <p class="pub__venue"><i>Preprint</i>, arXiv:2610.03546, 2026
+        <a class="tag" href="https://arxiv.org/abs/2610.03546" target="_blank" rel="noopener">arXiv</a>
+        <a class="tag" href="https://arxiv.org/pdf/2610.03546" target="_blank" rel="noopener">PDF</a>
+      </p>
+    </article>
+    <article class="pub">
+      <h3>Do EEG Foundation Models Generalize Across Clinical Cohorts? An External Blind-Test Study of Depression Biomarkers</h3>
+      <p class="pub__authors"><b>Yubo Wang</b>, Xiaoyu Tong, Xinliang Zhou, Yu Zhang<sup>†</sup></p>
+      <p class="pub__venue"><i>In preparation</i> for IEEE Journal of Biomedical and Health Informatics</p>
+    </article>
+    <p class="note"><sup>†</sup> Corresponding author</p>
+  </div>
+</section>
+
+<section class="shell row" id="research">
+  <h2 class="row__head">Research</h2>
+  <div class="row__body">
+    <article class="item">
+      <div class="item__top"><h3>ZeroMAG</h3><span class="when">Mar 2026 to now</span></div>
+      <p class="item__where">Stanford SPNI Lab and Nanyang Technological University, with Prof. Yu Zhang and Prof. Cuntai Guan</p>
+      <p>Gives a frozen EEG foundation model access to companion physiological signals by generating plug-and-play adapter weights, with a structure-aware weight VAE, a conditional diffusion transformer and a mixture-of-experts decoder. It adapts to unseen subjects, datasets and modality settings with no target labels and no target-side training: <b>+7.22 pp</b> balanced accuracy over EEG-only across 3 backbones and 6 held-out datasets, within 0.50 pp of supervised multimodal adaptation.</p>
+    </article>
+    <article class="item">
+      <div class="item__top"><h3>Blind-testing EEG models across clinical cohorts</h3><span class="when">May 2026 to now</span></div>
+      <p class="item__where">Stanford SPNI Lab, with Prof. Yu Zhang</p>
+      <p>Asks whether EEG models for depression diagnosis survive the move to an independent clinical cohort. Domain-adversarial learning and prediction-bias correction use only unlabeled local data, never the external test labels, and strict subject-level evaluation shows how much locally strong models degrade under site shift.</p>
+    </article>
+    <article class="item">
+      <div class="item__top"><h3>PhysioRuler</h3><span class="when">Aug 2026 to now</span></div>
+      <p class="item__where">Stanford Medicine and Harvard Medical School / BIDMC, with Prof. Haoqi Sun and Prof. M. Brandon Westover</p>
+      <p>A reference-based representation of whole-night polysomnography, organized by sleep stage, stability, physiological system and time scale rather than staging accuracy alone. System-specific encoders for EEG, EOG, ECG and respiration, a hidden semi-Markov model of stage dynamics and CAP-informed weak labels give interpretable axes such as slow-wave and sigma activity and cardiorespiratory instability.</p>
+    </article>
+    <article class="item">
+      <div class="item__top"><h3>Tabula 2.0</h3><span class="when">Sep 2026 to now</span></div>
+      <p class="item__where">With Dr. Jiayuan Ding (Stanford University) and Dr. Qingsong Wen (University of Oxford)</p>
+      <p>Extending the Tabula single-cell foundation model with multimodal inputs and larger-scale pretraining, toward a foundation model for unordered, heterogeneous scientific tables, including perturbation-conditioned prediction of cell state.</p>
+    </article>
+    <article class="item">
+      <div class="item__top"><h3>Shortcut learning in EEG emotion recognition</h3><span class="when">Nov 2024 to Jun 2025</span></div>
+      <p class="item__where">Institute of Automation, Chinese Academy of Sciences, with Prof. Ziyu Jia</p>
+      <p>Showed that emotion-recognition models were exploiting cross-channel artifacts rather than physiological patterns, then built a variational Bayesian heterogeneous GNN that aligns inter-channel relations across subjects (73.5% accuracy, 71.85% F1, leave-one-subject-out).</p>
+    </article>
+  </div>
+</section>
+
+<section class="shell row" id="news">
+  <h2 class="row__head">News</h2>
+  <div class="row__body">
+    <ul class="news">
+      <li><span class="when">Oct 2026</span><p>ZeroMAG is out on <a href="https://arxiv.org/abs/2610.03546" target="_blank" rel="noopener">arXiv</a>.</p></li>
+      <li><span class="when">Sep 2026</span><p>Started on Tabula 2.0, and a collaboration with Squirrel AI on AI agents for education.</p></li>
+      <li><span class="when">Aug 2026</span><p>Joined Prof. Haoqi Sun and Prof. M. Brandon Westover to work on whole-night sleep recordings.</p></li>
+      <li><span class="when">May 2026</span><p>Joined the SPNI Lab at Stanford School of Medicine as a visiting student researcher.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="shell row" id="education">
+  <h2 class="row__head">Education</h2>
+  <div class="row__body">
+    <article class="item item--tight">
+      <div class="item__top"><h3>Brown University</h3><span class="when">2025 to 2027</span></div>
+      <p>M.S. in Computer Science, GPA 4.0/4.0</p>
+    </article>
+    <article class="item item--tight">
+      <div class="item__top"><h3>Beijing Jiaotong University</h3><span class="when">2021 to 2025</span></div>
+      <p>B.Eng. in Computer Science and Technology, GPA 3.77/4.0 (top 5%), Honors Student. Merit Student Award and First-Class Academic Scholarship in 2022, 2023 and 2024.</p>
+    </article>
+  </div>
+</section>
+
+<section class="shell row" id="other">
+  <h2 class="row__head">Also</h2>
+  <div class="row__body">
+    <ul class="also">
+      <li><b>Squirrel AI</b>, research collaboration on AI agents for education with Dr. Qingsong Wen <span class="when">2026</span></li>
+      <li><b>MyGO</b>, a self-supervised audio foundation model trained with LeJEPA on AudioSet <span class="when">2025</span></li>
+      <li><b>China Academy of Railway Sciences</b>, software engineering intern on an LLM-based railway knowledge assistant <span class="when">2024</span></li>
+    </ul>
+  </div>
+</section>

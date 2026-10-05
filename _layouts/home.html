@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.author.name }}</title>
+  <meta name="description" content="{{ site.author.bio }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.author.name }}">
+  <meta property="og:description" content="{{ site.author.bio }}">
+  <meta property="og:image" content="{{ site.url }}{{ '/images/avatar.jpg' | relative_url }}">
+  <meta name="theme-color" content="#f5f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1217" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}?v=3" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}?v=3">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}?v=3">
+  <link rel="manifest" href="{{ '/images/site.webmanifest' | relative_url }}?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}?v=4">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="nav" aria-label="Sections">
+    <div class="nav__inner">
+      <a class="nav__name" href="#top">Yubo Wang</a>
+      <div class="nav__links">
+        <a href="#publications">Publications</a>
+        <a href="#research">Research</a>
+        <a href="#news">News</a>
+        <a href="#education">Education</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="shell hero__text">
+      <h1 class="hero__name">Yubo Wang</h1>
+      <p class="hero__line">I build foundation models for EEG and other physiological signals, and test whether they still work on data they have never seen.</p>
+      <p class="hero__links">
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </div>
+
+    <figure class="montage" aria-label="Animated multichannel sleep recording: EEG, eye movement, heart and breathing traces">
+      <canvas id="montage"></canvas>
+      <figcaption class="montage__scale"><span class="montage__bar"></span>1 s</figcaption>
+    </figure>
+  </header>
+
+  <main id="main">
+    {% include home-content.html %}
+  </main>
+
+  <footer class="shell">
+    <div class="footer">
+      <p>Yubo Wang, Providence, RI</p>
+      <p>Updated {{ site.time | date: '%B %Y' }}</p>
+    </div>
+  </footer>
+
+  {% if site.music.src and site.music.src != "" %}
+  <button class="music" id="music" type="button" aria-pressed="false" aria-label="Play music" title="Play music"
+          data-src="{{ site.music.src | relative_url }}" data-autoplay="{{ site.music.autoplay }}">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path class="music__on" d="M4 9v6h4l5 4V5L8 9H4Zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4Zm-2.5-8.8v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6Z"/><path class="music__off" d="M4 9v6h4l5 4V5L8 9H4Zm16.6 0.4-1.4-1.4L17 10.2 14.8 8l-1.4 1.4 2.2 2.2-2.2 2.2 1.4 1.4 2.2-2.2 2.2 2.2 1.4-1.4-2.2-2.2 2.2-2.2Z"/></svg>
+  </button>
+  <script src="{{ '/assets/js/music.js' | relative_url }}?v=1" defer></script>
+  {% endif %}
+
+  <script src="{{ '/assets/js/montage.js' | relative_url }}?v=1" defer></script>
+
+  {% if site.goatcounter and site.goatcounter != "" %}
+  <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  {% endif %}
+  {% if site.google_analytics_id and site.google_analytics_id != "" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site.google_analytics_id }}');</script>
+  {% endif %}
+</body>
+</html>
