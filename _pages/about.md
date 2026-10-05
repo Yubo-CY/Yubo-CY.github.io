@@ -25,19 +25,19 @@ I am currently a visiting student researcher in the Department of Psychiatry and
 - *2026.09*: Started a research collaboration with Squirrel AI (松鼠AI).
 - *2026.08*: Joined Harvard Medical School / Beth Israel Deaconess Medical Center as a research intern with Prof. Haoqi Sun (and Stanford University School of Medicine with Prof. M. Brandon Westover), working on multimodal physiological representations of objective sleep quality.
 - *2026.05*: Joined the SPNI Lab, Department of Psychiatry and Behavioral Sciences, Stanford University School of Medicine, as a visiting student researcher with Prof. Yu Zhang, working on generalization of EEG foundation models for depression biomarkers.
-- *2026.03*: Started **ZeroMAG** — zero-shot multimodal adapter generation for plug-and-play EEG foundation models (with Prof. Yu Zhang and Prof. Cuntai Guan).
+- *2026.03*: Started **ZeroMAG** — zero-shot multimodal adapter generation for plug-and-play EEG foundation models (with Prof. Cuntai Guan).
 
 # 📝 Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint coming soon</div><img src='images/500x300.png' alt="ZeroMAG" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/ZeroMAG%20Modular%20EEG%20Logo.png' alt="ZeroMAG" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-**ZeroMAG: Zero-Shot Multimodal Adapter Generation for Plug-and-Play EEG Foundation Models**
+[**ZeroMAG: Zero-Shot Multimodal Adapter Generation for Plug-and-Play EEG Foundation Models**](https://arxiv.org/abs/2610.03546)
 
-**Yubo Wang**\*, Chenyu Liu\*, Xinliang Zhou, Cuntai Guan, Yu Zhang
+**Yubo Wang**, Jingying Ma, Xinliang Zhou, Yangxuan Zhou, Jiquan Wang, Sha Zhao, Yiyuan Yang, Yi Ding, Ziyu Jia, Chenyu Liu, Cuntai Guan
 
-*Manuscript in preparation for ICLR 2027. Preprint coming soon to arXiv.*
-- A zero-shot multimodal adaptation framework that generates plug-and-play adapters from unlabeled physiological recordings, enabling frozen EEG foundation models to incorporate EOG, ECG, EMG and more — without task-specific retraining.
+*Preprint. arXiv:2610.03546, 2026.* [[arXiv](https://arxiv.org/abs/2610.03546)] [[PDF](https://arxiv.org/pdf/2610.03546)]
+- A zero-shot multimodal adapter generation framework that extends a frozen EEG encoder with plug-and-play adapters inferred from unlabeled target recordings — no target labels or retraining; +7.22 pp balanced accuracy over EEG-only inference across six held-out datasets and three backbones.
 </div>
 </div>
 
