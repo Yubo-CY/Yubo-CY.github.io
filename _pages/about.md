@@ -22,6 +22,7 @@ I am a Master's student in Computer Science at Brown University (2025–2027), w
 I am currently a visiting student researcher in the Department of Psychiatry and Behavioral Sciences at Stanford University School of Medicine (with Prof. Yu Zhang), and a research intern at Stanford Medicine and Harvard Medical School / Beth Israel Deaconess Medical Center (with Prof. Haoqi Sun and Prof. M. Brandon Westover), where I work on multimodal physiological representations of sleep quality.
 
 # 🔥 News
+- *2026.10*: Released **ZeroMAG** preprint on arXiv ([arXiv:2610.03546](https://arxiv.org/abs/2610.03546)); submitted to ICLR 2027.
 - *2026.09*: Started a research collaboration with Squirrel AI (松鼠AI).
 - *2026.08*: Joined Harvard Medical School / Beth Israel Deaconess Medical Center as a research intern with Prof. Haoqi Sun (and Stanford University School of Medicine with Prof. M. Brandon Westover), working on multimodal physiological representations of objective sleep quality.
 - *2026.05*: Joined the SPNI Lab, Department of Psychiatry and Behavioral Sciences, Stanford University School of Medicine, as a visiting student researcher with Prof. Yu Zhang, working on generalization of EEG foundation models for depression biomarkers.
@@ -36,16 +37,21 @@ I am currently a visiting student researcher in the Department of Psychiatry and
 
 **Yubo Wang**, Jingying Ma, Xinliang Zhou, Yangxuan Zhou, Jiquan Wang, Sha Zhao, Yiyuan Yang, Yi Ding, Ziyu Jia, Chenyu Liu, Cuntai Guan
 
-*Preprint. arXiv:2610.03546, 2026.* [[arXiv](https://arxiv.org/abs/2610.03546)] [[PDF](https://arxiv.org/pdf/2610.03546)]
+*Submitted to ICLR 2027. arXiv:2610.03546, 2026.* [[arXiv](https://arxiv.org/abs/2610.03546)] [[PDF](https://arxiv.org/pdf/2610.03546)]
 - A zero-shot multimodal adapter generation framework that extends a frozen EEG encoder with plug-and-play adapters inferred from unlabeled target recordings — no target labels or retraining; +7.22 pp balanced accuracy over EEG-only inference across six held-out datasets and three backbones.
 </div>
 </div>
 
+- **Do EEG Foundation Models Generalize Across Clinical Cohorts? An External Blind-Test Study of Depression Biomarkers.**
+  **Yubo Wang**, Xiaoyu Tong, Xinliang Zhou, Yu Zhang. *In preparation for IEEE Journal of Biomedical and Health Informatics.*
+  - External blind-test framework for depression diagnosis across independent clinical cohorts; domain-adversarial learning and prediction-bias correction using unlabeled local data; strict subject-level evaluation of cohort/site shift.
+
 # 💼 Research Experience
-- *2026.08 – Present*, **Research Intern**, Stanford University School of Medicine & Harvard Medical School (BIDMC). Mentors: Prof. Haoqi Sun, Prof. M. Brandon Westover. Learning objective sleep-quality representations from multimodal physiological signals (EEG/EOG/EMG/ECG/respiration/SpO2) beyond conventional sleep-stage classification.
-- *2026.05 – Present*, **Visiting Student Researcher**, SPNI Lab, Department of Psychiatry and Behavioral Sciences, Stanford University School of Medicine. Mentor: Prof. Yu Zhang. External blind-test generalization of frozen EEG foundation models for depression diagnosis and treatment-response prediction (TD-BRAIN Challenge); domain-adversarial training and reverse bias correction under domain shift.
-- *2026.03 – 2026.09*, **Graduate Student Researcher**, Stanford SPNI Lab & Nanyang Technological University. Mentors: Prof. Yu Zhang, Prof. Cuntai Guan. Proposed ZeroMAG (see above): structure-aware weight VAE + conditional diffusion transformer generating lightweight standalone adapters for frozen EEG backbones.
-- *2024.11 – 2025.06*, **Undergraduate Research Assistant**, Institute of Automation, Chinese Academy of Sciences. Mentor: Prof. Ziyu Jia. Audited shortcut learning in EEG emotion-recognition models; built a variational Bayesian heterogeneous GNN with relationship-distribution adaptation — 73.5% cross-subject accuracy on DEAP/DREAMER.
+- *2026.09 – Present*, **Research Collaborator**, **Tabula 2.0: Foundation Models for Structured Scientific and Cellular Data**. Mentors: Dr. Jiayuan Ding (industry), Dr. Qingsong Wen (University of Oxford). Extending the Tabula single-cell foundation model with multimodal capabilities and larger-scale pretraining toward a foundation model for unordered, heterogeneous scientific tables; discretized and latent representations with predictive and generative objectives, action-conditioned prediction under perturbations.
+- *2026.08 – Present*, **Research Intern**, **PhysioRuler: Structured Physiological Representations of Whole-Night Sleep**, Stanford University School of Medicine & Harvard Medical School (BIDMC). Mentors: Prof. Haoqi Sun, Prof. M. Brandon Westover. Reference-based representation of whole-night PSG organized by sleep stage, stability, physiological system, and temporal scale; system-specific encoders for EEG/EOG/ECG/respiration with 2/10/30/120-s multiscale aggregation; 5-state hidden semi-Markov model and CAP-informed weak labels; interpretable axes for slow-wave/sigma activity, respiratory variability, and cortical/cardiorespiratory instability.
+- *2026.05 – Present*, **Visiting Student Researcher**, SPNI Lab, Department of Psychiatry and Behavioral Sciences, Stanford University School of Medicine. Mentor: Prof. Yu Zhang. External blind-test framework for depression diagnosis across independent clinical cohorts using EEG foundation models, task-specific models, and clinical covariates; domain-adversarial learning and prediction-bias correction using unlabeled local development data without external test labels; strict subject-level evaluation to quantify cohort/site shift.
+- *2026.03 – Present*, **Graduate Student Researcher**, Stanford SPNI Lab & Nanyang Technological University. Mentors: Prof. Yu Zhang, Prof. Cuntai Guan. Proposed ZeroMAG (see above): structure-aware weight VAE + modality–subject–task-conditioned diffusion transformer + mixture-of-experts decoder generating lightweight standalone adapters for frozen EEG backbones; +7.22 pp over EEG-only, within 0.50 pp of supervised multimodal adaptation.
+- *2024.11 – 2025.06*, **Undergraduate Research Assistant**, Institute of Automation, Chinese Academy of Sciences. Mentor: Prof. Ziyu Jia. Audited shortcut learning in EEG emotion-recognition models; built a variational Bayesian heterogeneous GNN with relationship-distribution adaptation — 73.5% accuracy and 71.85% F1 under leave-one-subject-out evaluation on DEAP/DREAMER.
 
 # 📖 Education
 - *2025.09 – 2027.05 (expected)*, M.S. in Computer Science, Brown University, USA. GPA: 4.0/4.0.
@@ -62,5 +68,9 @@ I am currently a visiting student researcher in the Department of Psychiatry and
 - *2022.12 – 2023.03*, **Advanced Computer Systems Research Center, CAS** — Intern. Python data-visualization tooling; implemented the Maximal Information Coefficient (MIC) algorithm in Java.
 
 # 🛠 Projects
-- *2025.09 – 2025.12*, **MyGO: Audio Foundation Model via LeJEPA** — asynchronous high-throughput tf.data pipeline over 20,000+ AudioSet clips; vectorized multi-view augmentation; ViT-based audio representation with decoupled positional encodings.
-- *2025.09 – 2025.12*, **TerraForge: Real-Time Procedural Rendering Engine** — real-time renderer from scratch in C++/GLSL: 1.6M+ instanced L-system foliage segments, multi-layer PBR terrain, dual-pass HDR post-processing.
+- *2025.09 – 2025.12*, **MyGO: Audio Foundation Model via LeJEPA** — high-throughput tf.data pipeline over 20,000+ AudioSet clips with on-the-fly log-mel STFT for distributed training; vectorized multi-view augmentations for LeJEPA; ViT audio encoder with decoupled frequency/time positional encodings.
+
+# ⚙️ Technical Skills
+- **Programming:** Python, C++, Java, Bash; Git, Docker, LaTeX
+- **Deep learning:** PyTorch, TensorFlow, multi-GPU/distributed training, Hugging Face, Weights & Biases
+- **Signals & data:** EEG/PSG preprocessing (MNE, BIDS), NumPy, SciPy, Pandas, scikit-learn, Matplotlib
