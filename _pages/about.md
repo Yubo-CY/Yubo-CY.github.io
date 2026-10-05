@@ -22,7 +22,7 @@ I am a Master's student in Computer Science at Brown University (2025–2027), w
 I am currently a visiting student researcher in the Department of Psychiatry and Behavioral Sciences at Stanford University School of Medicine (with Prof. Yu Zhang), and a research intern at Stanford Medicine and Harvard Medical School / Beth Israel Deaconess Medical Center (with Prof. Haoqi Sun and Prof. M. Brandon Westover), where I work on multimodal physiological representations of sleep quality.
 
 # 🔥 News
-- *2026.10*: Released **ZeroMAG** preprint on arXiv ([arXiv:2610.03546](https://arxiv.org/abs/2610.03546)); submitted to ICLR 2027.
+- *2026.10*: Released **ZeroMAG** preprint on arXiv ([arXiv:2610.03546](https://arxiv.org/abs/2610.03546)).
 - *2026.09*: Started a research collaboration with Squirrel AI (松鼠AI).
 - *2026.08*: Joined Harvard Medical School / Beth Israel Deaconess Medical Center as a research intern with Prof. Haoqi Sun (and Stanford University School of Medicine with Prof. M. Brandon Westover), working on multimodal physiological representations of objective sleep quality.
 - *2026.05*: Joined the SPNI Lab, Department of Psychiatry and Behavioral Sciences, Stanford University School of Medicine, as a visiting student researcher with Prof. Yu Zhang, working on generalization of EEG foundation models for depression biomarkers.
@@ -37,7 +37,7 @@ I am currently a visiting student researcher in the Department of Psychiatry and
 
 **Yubo Wang**, Jingying Ma, Xinliang Zhou, Yangxuan Zhou, Jiquan Wang, Sha Zhao, Yiyuan Yang, Yi Ding, Ziyu Jia, Chenyu Liu, Cuntai Guan
 
-*Submitted to ICLR 2027. arXiv:2610.03546, 2026.* [[arXiv](https://arxiv.org/abs/2610.03546)] [[PDF](https://arxiv.org/pdf/2610.03546)]
+*Preprint. arXiv:2610.03546, 2026.* [[arXiv](https://arxiv.org/abs/2610.03546)] [[PDF](https://arxiv.org/pdf/2610.03546)]
 - A zero-shot multimodal adapter generation framework that extends a frozen EEG encoder with plug-and-play adapters inferred from unlabeled target recordings — no target labels or retraining; +7.22 pp balanced accuracy over EEG-only inference across six held-out datasets and three backbones.
 </div>
 </div>
