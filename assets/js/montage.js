@@ -66,7 +66,6 @@
     };
   }
   var eeg = [
-    eegChannel({ delta: 1.0, theta: 0.3, alpha: 0.08, beta: 0.05, spindle: 0.6, k: 1.0 }),
     eegChannel({ delta: 0.9, theta: 0.28, alpha: 0.1, beta: 0.05, spindle: 0.85, k: 0.85 }),
     eegChannel({ delta: 0.75, theta: 0.28, alpha: 0.22, beta: 0.04, spindle: 0.45, k: 0.55 })
   ];
@@ -120,21 +119,21 @@
 
     var sp = spindleEnv(t) * Math.sin(2 * Math.PI * events.spindleF * t);
     var kc = kComplex(t);
-    var out = new Array(6);
-    for (var i = 0; i < 3; i++) {
+    var out = new Array(eeg.length + 3);
+    for (var i = 0; i < eeg.length; i++) {
       var c = eeg[i], s = c.spec;
       out[i] = s.delta * c.delta.step() + s.theta * c.theta.step() + s.alpha * c.alpha.step()
         + s.beta * c.beta.step() + s.spindle * 0.9 * sp + s.k * kc;
     }
+    var e = eeg.length;
     events.eogPos += (events.eogTarget - events.eogPos) * 0.06;
-    out[3] = events.eogPos + 0.5 * eogDrift.step() + 0.05 * gauss();
-    out[4] = ecgAt(t) + 0.03 * gauss();
-    out[5] = (1 + 0.25 * respMod.step()) * (breath + 0.18 * Math.sin(4 * Math.PI * 0.24 * t + 0.6));
+    out[e] = events.eogPos + 0.5 * eogDrift.step() + 0.05 * gauss();
+    out[e + 1] = ecgAt(t) + 0.03 * gauss();
+    out[e + 2] = (1 + 0.25 * respMod.step()) * (breath + 0.18 * Math.sin(4 * Math.PI * 0.24 * t + 0.6));
     return out;
   }
 
   var CHANNELS = [
-    { label: "F4-M1", color: "--eeg", gain: 0.15 },
     { label: "C4-M1", color: "--eeg", gain: 0.15 },
     { label: "O2-M1", color: "--eeg", gain: 0.15 },
     { label: "E1-M2", color: "--eog", gain: 0.22 },
@@ -156,13 +155,14 @@
 
   function resize() {
     var rect = canvas.getBoundingClientRect();
+    if (rect.width < 2 || rect.height < 2) return;
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = Math.max(1, Math.round(rect.width));
     H = Math.max(1, Math.round(rect.height));
     canvas.width = W * dpr; canvas.height = H * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     var newN = W * SPP;
-    if (newN !== N) {
+    if (newN !== N || buf.length === 0) {
       buf = CHANNELS.map(function () { return new Float32Array(newN); });
       for (var j = 0; j < newN; j++) {
         var s = sample();
@@ -189,7 +189,7 @@
     for (var gx = phase; gx < W; gx += PPS) ctx.fillRect(Math.round(gx), 0, 1, H);
 
     var gap = 14 * SPP; // blank strip ahead of the sweep head
-    ctx.lineWidth = 1.25;
+    ctx.lineWidth = 1.1;
     ctx.lineJoin = "round";
     for (var c = 0; c < CHANNELS.length; c++) {
       var ch = CHANNELS[c], data = buf[c];
@@ -214,12 +214,12 @@
 
     // channel labels, on a paper-coloured tab so traces pass behind them
     var lx = labelLeft();
-    ctx.font = "500 12px " + font;
+    ctx.font = "500 11px " + font;
     ctx.textBaseline = "middle";
     for (var k = 0; k < CHANNELS.length; k++) {
       var y0 = lane * (k + 0.5), tw = ctx.measureText(CHANNELS[k].label).width;
       ctx.fillStyle = colors["--paper"];
-      ctx.fillRect(lx - 8, y0 - 9, tw + 16, 18);
+      ctx.fillRect(lx - 8, y0 - 8, tw + 16, 16);
       ctx.fillStyle = colors["--ink-3"];
       ctx.fillText(CHANNELS[k].label, lx, y0);
     }
@@ -267,7 +267,12 @@
   resize();
   start();
 
-  window.addEventListener("resize", function () { resize(); });
+  if ("ResizeObserver" in window) {
+    new ResizeObserver(function () { resize(); }).observe(canvas);
+  } else {
+    window.addEventListener("resize", function () { resize(); });
+  }
+  window.addEventListener("load", function () { resize(); });
   var scheme = window.matchMedia("(prefers-color-scheme: dark)");
   var onScheme = function () { readColors(); draw(); };
   if (scheme.addEventListener) scheme.addEventListener("change", onScheme);

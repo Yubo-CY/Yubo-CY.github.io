@@ -148,8 +148,8 @@ b, strong { font-weight: 600; }
 
 .montage {
   position: relative;
-  margin: 64px 0 0;
-  height: clamp(260px, 38vh, 400px);
+  margin: 72px 0 0;
+  height: clamp(190px, 24vh, 250px);
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
@@ -184,7 +184,7 @@ main { padding-top: 24px; }
 .about { padding-top: 64px; }
 .about .prose { font-size: 19px; line-height: 1.6; }
 .about__photo {
-  display: block; width: 160px; height: 160px; object-fit: cover;
+  display: block; width: 128px; height: 128px; object-fit: cover;
   border-radius: 6px;
   filter: saturate(.85);
 }
@@ -250,7 +250,7 @@ h3 { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.35; letter-spa
   .nav__links a:nth-child(n+3) { display: none; }
   .hero { padding-top: 96px; }
   .hero__name { font-size: clamp(56px, 17vw, 96px); }
-  .montage { margin-top: 44px; height: 240px; }
+  .montage { margin-top: 48px; height: 180px; }
   .row { grid-template-columns: 1fr; padding-top: 56px; }
   .row__head { position: static; font-size: 24px; margin-bottom: 18px; }
   .about { padding-top: 48px; }
