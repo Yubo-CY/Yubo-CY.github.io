@@ -32,6 +32,51 @@
         <a class="tag" href="https://arxiv.org/pdf/2610.03546" target="_blank" rel="noopener">PDF</a>
       </p>
       <p class="pub__tldr">Generates plug-and-play adapters that let a frozen EEG foundation model use other physiological signals on unseen subjects and datasets, without target labels or retraining.</p>
+      <figure class="fig">
+        <svg viewBox="0 0 680 212" role="img" aria-labelledby="zm-t">
+          <title id="zm-t">ZeroMAG overview: EOG and ECG recordings go into an adapter generator, whose adapters plug into a frozen EEG foundation model that also takes the EEG.</title>
+          <defs>
+            <marker id="zm-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path class="fig__head" d="M0 0 8 4 0 8z"/></marker>
+          </defs>
+          <g class="fig__label">
+            <text x="0" y="48">EEG</text>
+            <text x="0" y="122">EOG</text>
+            <text x="0" y="176">ECG</text>
+          </g>
+          <path class="fig__eeg" d="M52.0,35.7 L53.5,37.2 L55.0,44.2 L56.5,46.6 L58.0,47.8 L59.5,44.3 L61.0,50.1 L62.5,50.9 L64.1,52.9 L65.6,44.0 L67.1,42.9 L68.6,40.9 L70.1,44.0 L71.6,39.1 L73.1,36.0 L74.6,35.9 L76.1,41.3 L77.6,46.1 L79.1,44.3 L80.6,45.3 L82.1,46.2 L83.6,53.8 L85.1,50.9 L86.6,49.0 L88.2,41.8 L89.7,45.2 L91.2,43.3 L92.7,42.4 L94.2,35.2 L95.7,35.9 L97.2,39.5 L98.7,43.7 L100.2,43.8 L101.7,41.8 L103.2,46.8 L104.7,50.2 L106.2,54.2 L107.7,47.3 L109.2,46.6 L110.8,43.8 L112.3,48.0 L113.8,41.8 L115.3,38.5 L116.8,34.3 L118.3,39.4 L119.8,41.9 L121.3,41.9 L122.8,40.8 L124.3,43.2 L125.8,50.7 L127.3,51.4 L128.8,50.9 L130.3,44.7 L131.8,48.4 L133.4,46.7 L134.9,47.0 L136.4,37.6 L137.9,37.2 L139.4,37.2 L140.9,42.2 L142.4,40.1 L143.9,39.0 L145.4,41.6 L146.9,47.4 L148.4,52.3 L149.9,48.6 L151.4,48.1 L152.9,46.4 L154.4,51.5 L155.9,46.1 L157.5,42.9 L159.0,35.7 L160.5,40.0 L162.0,39.9 L163.5,40.8 L165.0,36.7 L166.5,39.5 L168.0,45.5"/>
+          <path class="fig__eog" d="M52.0,111.1 L53.5,111.1 L55.0,111.1 L56.5,111.0 L58.0,111.0 L59.5,111.0 L61.0,111.0 L62.5,111.1 L64.1,111.1 L65.6,111.1 L67.1,111.2 L68.6,111.4 L70.1,111.9 L71.6,112.8 L73.1,114.6 L74.6,117.3 L76.1,120.3 L77.6,122.5 L79.1,123.8 L80.6,124.4 L82.1,124.7 L83.6,124.8 L85.1,124.9 L86.6,124.9 L88.2,125.0 L89.7,125.0 L91.2,125.0 L92.7,125.0 L94.2,125.0 L95.7,124.9 L97.2,124.9 L98.7,124.8 L100.2,124.7 L101.7,124.4 L103.2,123.7 L104.7,122.3 L106.2,119.9 L107.7,116.8 L109.2,114.2 L110.8,112.6 L112.3,111.8 L113.8,111.4 L115.3,111.2 L116.8,111.1 L118.3,111.1 L119.8,111.0 L121.3,111.0 L122.8,111.0 L124.3,111.0 L125.8,111.0 L127.3,111.1 L128.8,111.1 L130.3,111.1 L131.8,111.2 L133.4,111.5 L134.9,112.0 L136.4,113.1 L137.9,115.1 L139.4,118.0 L140.9,120.9 L142.4,122.9 L143.9,124.0 L145.4,124.5 L146.9,124.8 L148.4,124.9 L149.9,124.9 L151.4,124.9 L152.9,125.0 L154.4,125.0 L155.9,125.0 L157.5,125.0 L159.0,125.0 L160.5,124.9 L162.0,124.9 L163.5,124.8 L165.0,124.6 L166.5,124.2 L168.0,123.4"/>
+          <path class="fig__ecg" d="M52.0,176.0 L53.5,176.0 L55.0,175.8 L56.5,174.9 L58.0,175.3 L59.5,175.9 L61.0,172.7 L62.5,166.8 L64.1,178.1 L65.6,176.0 L67.1,175.6 L68.6,174.2 L70.1,173.0 L71.6,173.8 L73.1,175.3 L74.6,175.9 L76.1,176.0 L77.6,176.0 L79.1,176.0 L80.6,176.0 L82.1,175.9 L83.6,175.1 L85.1,175.0 L86.6,175.9 L88.2,174.9 L89.7,165.1 L91.2,176.9 L92.7,176.3 L94.2,175.7 L95.7,174.7 L97.2,173.2 L98.7,173.4 L100.2,175.0 L101.7,175.8 L103.2,176.0 L104.7,176.0 L106.2,176.0 L107.7,176.0 L109.2,176.0 L110.8,175.4 L112.3,174.8 L113.8,175.7 L115.3,175.7 L116.8,167.1 L118.3,173.4 L119.8,177.0 L121.3,175.9 L122.8,175.1 L124.3,173.6 L125.8,173.1 L127.3,174.5 L128.8,175.7 L130.3,176.0 L131.8,176.0 L133.4,176.0 L134.9,176.0 L136.4,176.0 L137.9,175.7 L139.4,174.8 L140.9,175.5 L142.4,175.9 L143.9,171.0 L145.4,168.7 L146.9,177.9 L148.4,176.0 L149.9,175.4 L151.4,174.0 L152.9,173.0 L154.4,174.0 L155.9,175.5 L157.5,175.9 L159.0,176.0 L160.5,176.0 L162.0,176.0 L163.5,176.0 L165.0,176.0 L166.5,176.0 L168.0,176.0"/>
+          <text class="fig__note" x="52" y="206">unlabeled recordings from a new setting</text>
+
+          <path class="fig__arrow" d="M176 44 H462" marker-end="url(#zm-a)"/>
+          <path class="fig__arrow" d="M176 118 C196 118 198 126 216 128" marker-end="url(#zm-a)"/>
+          <path class="fig__arrow" d="M176 172 C196 172 198 160 216 158" marker-end="url(#zm-a)"/>
+
+          <rect class="fig__box" x="220" y="98" width="150" height="88" rx="8"/>
+          <text class="fig__title" x="295" y="137" text-anchor="middle">Adapter generator</text>
+          <text class="fig__sub" x="295" y="156" text-anchor="middle">weight VAE + diffusion</text>
+
+          <path class="fig__arrow" d="M370 120 H386" marker-end="url(#zm-a)"/>
+          <path class="fig__arrow" d="M370 158 H386" marker-end="url(#zm-a)"/>
+          <rect class="fig__fill-eog" x="390" y="113" width="14" height="14" rx="3"/>
+          <rect class="fig__fill-ecg" x="390" y="151" width="14" height="14" rx="3"/>
+          <path class="fig__arrow fig__arrow--dash" d="M408 120 H472" marker-end="url(#zm-a)"/>
+          <path class="fig__arrow fig__arrow--dash" d="M408 158 H472" marker-end="url(#zm-a)"/>
+
+          <g class="fig__lock" transform="translate(470 4)"><rect x="0" y="5" width="10" height="8" rx="1.5"/><path d="M2.5 5 V3.2 a2.5 2.5 0 0 1 5 0 V5" fill="none"/></g>
+          <text class="fig__title" x="486" y="15">Frozen EEG model</text>
+          <rect class="fig__box" x="466" y="24" width="140" height="164" rx="10"/>
+          <rect class="fig__layer" x="494" y="36" width="96" height="16" rx="3"/>
+          <rect class="fig__layer" x="494" y="74" width="96" height="16" rx="3"/>
+          <rect class="fig__layer" x="494" y="112" width="96" height="16" rx="3"/>
+          <rect class="fig__layer" x="494" y="150" width="96" height="16" rx="3"/>
+          <rect class="fig__fill-eog" x="476" y="114" width="12" height="12" rx="2.5"/>
+          <rect class="fig__fill-ecg" x="476" y="152" width="12" height="12" rx="2.5"/>
+
+          <path class="fig__arrow" d="M606 106 H636" marker-end="url(#zm-a)"/>
+          <text class="fig__sub" x="642" y="110">output</text>
+        </svg>
+      </figure>
     </article>
     <article class="pub">
       <h3>Do EEG Foundation Models Generalize Across Clinical Cohorts? An External Blind-Test Study of Depression Biomarkers</h3>
