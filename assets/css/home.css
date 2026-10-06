@@ -182,7 +182,7 @@ main { padding-top: 24px; }
 .prose p { margin: 0 0 18px; }
 .prose p:last-child { margin-bottom: 0; }
 .about { padding-top: 64px; }
-.about .prose { font-size: 19px; line-height: 1.6; }
+.about .prose { font-size: 18px; line-height: 1.62; }
 .about__photo {
   display: block; width: 128px; height: 128px; object-fit: cover;
   border-radius: 6px;
@@ -208,6 +208,7 @@ h3 { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.35; letter-spa
 .pub__authors b { color: var(--ink); }
 .pub__venue { color: var(--ink-2); font-size: 16px; }
 .pub__venue i { color: var(--ink); }
+.pub__tldr { font-size: 16px; }
 .tag { margin-left: 12px; font-size: 14px; font-weight: 600; color: var(--ink); }
 .note { margin: 20px 0 0; font-size: 13px; color: var(--ink-3); }
 
