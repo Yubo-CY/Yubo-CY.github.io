@@ -276,7 +276,7 @@ h3 { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.35; letter-spa
   .hero { padding-top: 96px; }
   .hero__name { font-size: clamp(56px, 17vw, 96px); }
   .montage { margin-top: 48px; height: 180px; }
-  .row { grid-template-columns: 1fr; padding-top: 56px; }
+  .row { grid-template-columns: minmax(0, 1fr); padding-top: 56px; }
   .row__head { position: static; font-size: 24px; margin-bottom: 18px; }
   .about { padding-top: 48px; }
   .about .row__head { margin-bottom: 20px; }
