@@ -3,10 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.author.name }}</title>
+  <title>Yubo Wang | Brown University</title>
+  <link rel="canonical" href="https://yubo-cy.github.io/">
+  {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Yubo Wang","url":"https://yubo-cy.github.io/",
+   "image":"https://yubo-cy.github.io/images/avatar.jpg","email":"mailto:{{ site.author.email }}",
+   "jobTitle":"M.S. student in Computer Science","affiliation":{"@type":"CollegeOrUniversity","name":"Brown University"},
+   "alumniOf":{"@type":"CollegeOrUniversity","name":"Beijing Jiaotong University"},
+   "knowsAbout":["EEG","foundation models","sleep","physiological signals","multimodal representation learning"],
+   "sameAs":["{{ site.author.googlescholar }}","https://github.com/{{ site.author.github }}"]}
+  </script>
   <meta name="description" content="{{ site.author.bio }}">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ site.author.name }}">
+  <meta property="og:title" content="Yubo Wang | Brown University">
   <meta property="og:description" content="{{ site.author.bio }}">
   <meta property="og:image" content="{{ site.url }}{{ '/images/avatar.jpg' | relative_url }}">
   <meta name="theme-color" content="#f5f6f3" media="(prefers-color-scheme: light)">
